@@ -1,16 +1,14 @@
-// const name='peter'
+const sqlite3= require('sqlite3').verbose()
+let sql
 
-const os=require('os')
-const user=os.userInfo()
-// console.log(name)
-console.log(user)
-console.log(os.uptime())
+//connct to DB
+const db=new sqlite3.Database('./database.db', sqlite3.OPEN_READWRITE, (err)=>{
+    if (err) return console.error(err.message)
 
-const currentSys={
-    name : os.type(),
-    release: os.release(),
-    totalMem:os.totalmem(),
-    freeMem: os.freemem()
+})
 
-}
-console.log(currentSys)
+//create DB
+sql=`CREATE TABLE users(id INTERGER PRIMARY KEY, first_name, last_name, username, password, email)`
+db.run(sql)
+return db;
+

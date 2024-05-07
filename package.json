@@ -1,6 +1,31 @@
 {
+  "name": "node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node exress.js",
+    "dev": "nodemon exress.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Veektoor/node-train.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Veektoor/node-train/issues"
+  },
+  "homepage": "https://github.com/Veektoor/node-train#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
   "dependencies": {
+    "bootstrap": "^5.3.3",
+    "ejs": "^3.1.10",
     "express": "^4.19.2",
-    "formidable": "^3.5.1"
+    "socket.io": "^4.7.5",
+    "sqlite3": "^5.1.7"
   }
 }
